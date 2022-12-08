@@ -10,7 +10,7 @@ STAGE::~STAGE() {
 void STAGE::draw() {
 	clear();
 	printSize(300);
-	print("STAGE");
+	print("Stage");
 }
 void STAGE::nextScene() {
 
