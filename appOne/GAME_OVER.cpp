@@ -11,7 +11,7 @@ GAME_OVER::~GAME_OVER() {
 void GAME_OVER::draw() {
 	clear();
 	printSize(300);
-	print("    Game Over");
+	print("  Game Over");
 }
 void GAME_OVER::nextScene() {
 	if (isTrigger(KEY_Z)) {
