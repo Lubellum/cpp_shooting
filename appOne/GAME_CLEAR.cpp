@@ -1,17 +1,17 @@
 #include "libOne.h"
-#include "GAME_OVER.h"
-GAME_OVER::GAME_OVER(class GAME* game) :
+#include "GAME_CLEAR.h"
+GAME_CLEAR::GAME_CLEAR(class GAME* game) :
 	SCENE(game) {
 
 }
-GAME_OVER::~GAME_OVER() {
+GAME_CLEAR::~GAME_CLEAR() {
 
 }
-void GAME_OVER::draw() {
+void GAME_CLEAR::draw() {
 	clear();
 	printSize(300);
 	print("    Game Over");
 }
-void GAME_OVER::nextScene() {
+void GAME_CLEAR::nextScene() {
 
 }
