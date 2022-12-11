@@ -16,5 +16,5 @@ public:
 	GAME();
 	~GAME();
 	void run();
+	void changeScene(SCENE_ID sceneId);
 };
-

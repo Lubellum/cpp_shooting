@@ -28,3 +28,7 @@ void GAME::run() {
         Scenes[CurSceneId]->proc();
     }
 }
+
+void GAME::changeScene(SCENE_ID sceneId) {
+    CurSceneId = sceneId;
+}
