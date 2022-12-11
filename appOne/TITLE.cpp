@@ -1,4 +1,5 @@
 #include "libOne.h"
+#include "GAME.h"
 #include "TITLE.h"
 TITLE::TITLE(class GAME* game):
 SCENE(game){
@@ -13,5 +14,7 @@ void TITLE::draw() {
 	print("Title");
 }
 void TITLE::nextScene() {
-
+	if (isTrigger(KEY_Z)) {
+		game()->changeScene(GAME::STAGE_ID);
+	}
 }

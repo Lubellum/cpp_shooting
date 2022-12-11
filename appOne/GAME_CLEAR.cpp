@@ -1,4 +1,5 @@
 #include "libOne.h"
+#include "GAME.h"
 #include "GAME_CLEAR.h"
 GAME_CLEAR::GAME_CLEAR(class GAME* game) :
 	SCENE(game) {
@@ -13,5 +14,7 @@ void GAME_CLEAR::draw() {
 	print("    Game Over");
 }
 void GAME_CLEAR::nextScene() {
-
+	if (isTrigger(KEY_Z)) {
+		game()->changeScene(GAME::TITLE_ID);
+	}
 }
