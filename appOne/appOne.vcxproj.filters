@@ -24,6 +24,7 @@
     <ClCompile Include="TITLE.cpp" />
     <ClCompile Include="STAGE.cpp" />
     <ClCompile Include="GAME_CLEAR.cpp" />
+    <ClCompile Include="GAME_OVER.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GAME.h" />
@@ -32,5 +33,6 @@
     <ClInclude Include="TITLE.h" />
     <ClInclude Include="STAGE.h" />
     <ClInclude Include="GAME_CLEAR.h" />
+    <ClInclude Include="GAME_OVER.h" />
   </ItemGroup>
 </Project>
