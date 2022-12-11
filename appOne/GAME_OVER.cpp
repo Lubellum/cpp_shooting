@@ -10,7 +10,7 @@ GAME_OVER::~GAME_OVER() {
 void GAME_OVER::draw() {
 	clear();
 	printSize(300);
-	print("GAME_OVER");
+	print("    Game Over");
 }
 void GAME_OVER::nextScene() {
 
