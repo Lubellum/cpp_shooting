@@ -5,6 +5,7 @@ class SCENE :
 {
 public:
     SCENE(class GAME* game);
+    // virtual →　仮想関数　派生クラスからでも基底クラスの関数を上書きできる？オーバーライド？
     virtual ~SCENE();
     virtual void create();
     virtual void init();
@@ -13,3 +14,4 @@ public:
     virtual void draw();
     virtual void nextScene();
 };
+あああああああああああああ
