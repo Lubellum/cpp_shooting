@@ -4,6 +4,8 @@ class GAME
 public:
 	// enumは列挙型　→　メンバ？に数字をつけている？
 	enum SCENE_ID {
+		// 未定義の場合に何もしない...
+		// NONE_ID = -1,
 		TITLE_ID,
 		STAGE_ID,
 		GAME_CLEAR_ID,

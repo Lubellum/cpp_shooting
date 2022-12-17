@@ -6,13 +6,15 @@
 #include "GAME.h"
 // そもそもここで何をしている？　GAMEクラスを継承したGAME関数？の定義？　　→　　コンストラクタで、クラス生成時の処理？
 GAME::GAME() {
-	/// newとは？　→　メモリの動的管理？
-	Scenes[TITLE_ID] = new TITLE(this);
+	// newとは？　→　メモリの動的管理？
+	// クラスの中でクラスのインスタンスを作っている
+	this->Scenes[TITLE_ID] = new TITLE(this);
 	Scenes[STAGE_ID] = new STAGE(this);
 	Scenes[GAME_CLEAR_ID] = new GAME_CLEAR(this);
 	Scenes[GAME_OVER_ID] = new GAME_OVER(this);
 	CurSceneId = TITLE_ID;
 }
+
 GAME::~GAME() {
 	// deleteで確保したメモリを削除？　→　newとセットっぽい。
 
@@ -27,6 +29,7 @@ GAME::~GAME() {
 // void の使い方がわかっていない。
 //「void クラス名::run()メソッド」で、GAMEクラスを継承したrun()メソッドを定義(voidで、数値は渡さない)ということ？
 // 「void型」というもの？
+// GAMEクラスのrun関数の中身を定義→run関数はGAME.hにある。
 void GAME::run() {
 	window(1920, 1080, full);
 	while (notQuit) {
