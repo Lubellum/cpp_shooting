@@ -3,9 +3,11 @@
 #include "STAGE.h"
 #include "GAME_CLEAR.h"
 #include "GAME_OVER.h"
+#include "CONTAINER.h"
 #include "GAME.h"
 // そもそもここで何をしている？　GAMEクラスを継承したGAME関数？の定義？　　→　　コンストラクタで、クラス生成時の処理？
 GAME::GAME() {
+	Container = new CONTAINER;
 	// newとは？　→　メモリの動的管理？
 	// クラスの中でクラスのインスタンスを作っている
 	this->Scenes[TITLE_ID] = new TITLE(this);
@@ -32,6 +34,9 @@ GAME::~GAME() {
 // GAMEクラスのrun関数の中身を定義→run関数はGAME.hにある。
 void GAME::run() {
 	window(1920, 1080, full);
+
+	Container->load();
+	Scenes[TITLE_ID]->create();
 	while (notQuit) {
 		Scenes[CurSceneId]->proc();
 	}

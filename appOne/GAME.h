@@ -1,6 +1,11 @@
 #pragma once
 class GAME
 {
+//コンテナ
+private:
+	class CONTAINER* Container;
+public:
+	class CONTAINER* container() { return Container; }
 public:
 	// enumは列挙型　→　メンバ？に数字をつけている？
 	enum SCENE_ID {

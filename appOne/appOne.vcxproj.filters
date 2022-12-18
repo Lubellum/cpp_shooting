@@ -5,6 +5,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="manager">
+      <UniqueIdentifier>{1efba66a-712d-4fcb-824f-ce5697c9bde9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene">
+      <UniqueIdentifier>{f3f700b3-3349-4ad7-9a2f-fe091fc2c466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene\base">
+      <UniqueIdentifier>{2f4ba935-37a8-4de2-b5c5-272cc16f7d71}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc">
@@ -17,22 +26,54 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="gmain.cpp" />
-    <ClCompile Include="GAME.cpp" />
-    <ClCompile Include="GAME_OBJECT.cpp" />
-    <ClCompile Include="SCENE.cpp" />
-    <ClCompile Include="TITLE.cpp" />
-    <ClCompile Include="STAGE.cpp" />
-    <ClCompile Include="GAME_CLEAR.cpp" />
-    <ClCompile Include="GAME_OVER.cpp" />
+    <ClCompile Include="GAME.cpp">
+      <Filter>manager</Filter>
+    </ClCompile>
+    <ClCompile Include="gmain.cpp">
+      <Filter>manager</Filter>
+    </ClCompile>
+    <ClCompile Include="GAME_CLEAR.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="GAME_OBJECT.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="GAME_OVER.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="STAGE.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="TITLE.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SCENE.cpp">
+      <Filter>scene\base</Filter>
+    </ClCompile>
+    <ClCompile Include="CONTAINER.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GAME.h" />
-    <ClInclude Include="GAME_OBJECT.h" />
-    <ClInclude Include="SCENE.h" />
-    <ClInclude Include="TITLE.h" />
-    <ClInclude Include="STAGE.h" />
-    <ClInclude Include="GAME_CLEAR.h" />
-    <ClInclude Include="GAME_OVER.h" />
+    <ClInclude Include="GAME.h">
+      <Filter>manager</Filter>
+    </ClInclude>
+    <ClInclude Include="GAME_CLEAR.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GAME_OBJECT.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GAME_OVER.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="STAGE.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="TITLE.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SCENE.h">
+      <Filter>scene\base</Filter>
+    </ClInclude>
+    <ClInclude Include="CONTAINER.h" />
   </ItemGroup>
 </Project>
