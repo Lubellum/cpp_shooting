@@ -14,6 +14,9 @@
     <Filter Include="scene\base">
       <UniqueIdentifier>{2f4ba935-37a8-4de2-b5c5-272cc16f7d71}</UniqueIdentifier>
     </Filter>
+    <Filter Include="container">
+      <UniqueIdentifier>{4b074419-a139-48dc-8e85-495ecb15300b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc">
@@ -50,7 +53,10 @@
     <ClCompile Include="SCENE.cpp">
       <Filter>scene\base</Filter>
     </ClCompile>
-    <ClCompile Include="CONTAINER.cpp" />
+    <ClCompile Include="CONTAINER.cpp">
+      <Filter>container</Filter>
+    </ClCompile>
+    <ClCompile Include="PLAYER.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GAME.h">
@@ -74,6 +80,9 @@
     <ClInclude Include="SCENE.h">
       <Filter>scene\base</Filter>
     </ClInclude>
-    <ClInclude Include="CONTAINER.h" />
+    <ClInclude Include="CONTAINER.h">
+      <Filter>container</Filter>
+    </ClInclude>
+    <ClInclude Include="PLAYER.h" />
   </ItemGroup>
 </Project>
