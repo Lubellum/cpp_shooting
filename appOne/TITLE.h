@@ -13,6 +13,7 @@ public:
         char str[16];
     };
 private:
+    // ‚±‚±
     DATA Title;
 
 public:

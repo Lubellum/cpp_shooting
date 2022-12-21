@@ -2,6 +2,7 @@
 void CONTAINER::load() {
 	setData();
 }
+// 何故setDataでデータをセットし、loadで渡している？(感覚ではなんとなくわかる…)
 void CONTAINER::setData() {
 	Data.title.backColor = COLOR(0, 20, 0);
 	Data.title.textColor = COLOR(0, 255, 0);

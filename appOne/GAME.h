@@ -1,8 +1,9 @@
 #pragma once
 class GAME
 {
-//コンテナ
+
 private:
+	// CONTAINERにポインタを付ける理由は？　GAMEクラスの外のクラスを継承(？)しようとしたから？
 	class CONTAINER* Container;
 public:
 	class CONTAINER* container() { return Container; }

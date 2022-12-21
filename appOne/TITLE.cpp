@@ -10,6 +10,7 @@ TITLE::~TITLE() {
 
 }
 void TITLE::create() {
+	// アロー演算子　→　クラスのメンバにアクセスするために使う？　意味合い的には「.」とほぼ同じ？
 	Title = game()->container()->title();
 }
 void TITLE::draw() {
