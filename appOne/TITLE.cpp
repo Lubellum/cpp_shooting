@@ -2,6 +2,7 @@
 #include "CONTAINER.h"
 #include "GAME.h"
 #include "TITLE.h"
+// 初期化子リスト　:の後にメンバ変数を初期化
 TITLE::TITLE(class GAME* game):
 SCENE(game){
 	
