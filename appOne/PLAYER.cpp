@@ -12,9 +12,13 @@ void PLAYER::create(){
 void PLAYER::init(){
 }
 void PLAYER::update(){
-	if (isPress(KEY_A)) {
+	if (Player.pos.x > Player.limitW && isPress(KEY_A)) {
 		Player.pos.x += -Player.advSpeed * delta;
+	}
+	else if (Player.pos.x < width - Player.limitW && isPress(KEY_D)) {
+		Player.pos.x += Player.advSpeed * delta;
 	}
 }
 void PLAYER::draw(){
+	image(Player.img, Player.pos.x, Player.pos.y, Player.angle);
 }

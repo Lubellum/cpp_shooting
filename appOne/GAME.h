@@ -4,6 +4,7 @@ class GAME
 
 private:
 	// CONTAINERにポインタを付ける理由は？　GAMEクラスの外のクラスを継承(？)しようとしたから？
+	// アドレスを取得するための変数Containerの定義。(型をポインタ型にすることでポインタを扱えるようにする)
 	class CONTAINER* Container;
 public:
 	class CONTAINER* container() { return Container; }
