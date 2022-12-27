@@ -4,6 +4,7 @@
 #include "GAME_CLEAR.h"
 #include "GAME_OVER.h"
 #include "CONTAINER.h"
+#include "PLAYER.h"
 #include "GAME.h"
 GAME::GAME() {
 	Container = new CONTAINER;
@@ -14,6 +15,8 @@ GAME::GAME() {
 	Scenes[GAME_CLEAR_ID] = new GAME_CLEAR(this);
 	Scenes[GAME_OVER_ID] = new GAME_OVER(this);
 	CurSceneId = TITLE_ID;
+
+	Player = new PLAYER(this);
 }
 
 GAME::~GAME() {
@@ -28,6 +31,7 @@ void GAME::run() {
 
 	Container->load();
 	Scenes[TITLE_ID]->create();
+	Player->create();
 	while (notQuit) {
 		Scenes[CurSceneId]->proc();
 	}
