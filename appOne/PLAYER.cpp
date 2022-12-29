@@ -16,6 +16,7 @@ void PLAYER::update(){
 		Player.pos.x += -Player.advSpeed * delta;
 	}
 	else if (Player.pos.x < width - Player.limitW && isPress(KEY_D)) {
+		// deltaは「1秒」のことを指すそう。　秒数によってプレイヤーの移動距離が決まるので、フレームレートが関係ないそう。
 		Player.pos.x += Player.advSpeed * delta;
 	}
 }
