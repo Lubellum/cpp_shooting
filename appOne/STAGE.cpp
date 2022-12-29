@@ -1,6 +1,7 @@
 #include "libOne.h"
 #include "GAME.h"
 #include "STAGE.h"
+#include "PLAYER.h"
 STAGE::STAGE(class GAME* game) :
 	SCENE(game) {
 
@@ -8,10 +9,12 @@ STAGE::STAGE(class GAME* game) :
 STAGE::~STAGE() {
 
 }
+void STAGE::update() {
+	game()->player()->update();
+}
 void STAGE::draw() {
 	clear();
-	printSize(300);
-	print("Stage");
+	game()->player()->draw();
 }
 void STAGE::nextScene() {
 	if (isTrigger(KEY_Z)) {

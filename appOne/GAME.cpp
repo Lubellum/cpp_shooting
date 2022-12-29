@@ -20,6 +20,7 @@ GAME::GAME() {
 }
 
 GAME::~GAME() {
+	delete Player;
 	// ƒq[ƒv—Ìˆæ‚Ì—¬‚ê‚ÉŠ´‚¶‚éB
 	for (int i = 0; i < NUM_SCENES; i++) {
 		delete Scenes[i];
@@ -32,8 +33,12 @@ void GAME::run() {
 	Container->load();
 	Scenes[TITLE_ID]->create();
 	Player->create();
+
+	initDeltaTime();
 	while (notQuit) {
+		setDeltaTime();
 		Scenes[CurSceneId]->proc();
+		print(delta);
 	}
 }
 

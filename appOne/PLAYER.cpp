@@ -20,5 +20,6 @@ void PLAYER::update(){
 	}
 }
 void PLAYER::draw(){
+	rectMode(CENTER);
 	image(Player.img, Player.pos.x, Player.pos.y, Player.angle);
 }

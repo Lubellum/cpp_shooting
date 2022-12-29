@@ -4,9 +4,7 @@ void CONTAINER::load() {
 	// ロードするタイミングを分けたり…
 	loadGraphic();
 }
-// 何故setDataでデータをセットし、loadで渡している？(感覚ではなんとなくわかる…)
 
-// 外部ファイルから引っ張ってきているか否か
 // JSON・XML・CSVでデータを引っ張ってくるものに書き換えれたらいいね
 void CONTAINER::setData() {
 	Data.title.backColor = COLOR(0, 20, 0);
