@@ -57,6 +57,7 @@
       <Filter>container</Filter>
     </ClCompile>
     <ClCompile Include="PLAYER.cpp" />
+    <ClCompile Include="ENEMIES.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GAME.h">
@@ -84,5 +85,6 @@
       <Filter>container</Filter>
     </ClInclude>
     <ClInclude Include="PLAYER.h" />
+    <ClInclude Include="ENEMIES.h" />
   </ItemGroup>
 </Project>

@@ -153,6 +153,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CONTAINER.cpp" />
+    <ClCompile Include="ENEMIES.cpp" />
     <ClCompile Include="GAME.cpp" />
     <ClCompile Include="GAME_CLEAR.cpp" />
     <ClCompile Include="GAME_OBJECT.cpp" />
@@ -171,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CONTAINER.h" />
+    <ClInclude Include="ENEMIES.h" />
     <ClInclude Include="GAME.h" />
     <ClInclude Include="GAME_CLEAR.h" />
     <ClInclude Include="GAME_OBJECT.h" />
