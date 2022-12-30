@@ -19,8 +19,18 @@ void CONTAINER::setData() {
 	Data.player.pos.x = 960;
 	Data.player.pos.y = 970;
 	Data.player.limitW = 100;
+
+	Data.enemy.totalNum = 8;
+	Data.enemy.majRadius = 700;
+	Data.enemy.minRadius = 100;
+	Data.enemy.centerPos = VECTOR2(960, -300);
+	Data.enemy.fallSpeed = 60;
+	Data.enemy.targetPosY = 300;
+	Data.enemy.refTheta = 0;
+	Data.enemy.thetaSpeed = 0.6f;
 }
 
 void CONTAINER::loadGraphic() {
 	Data.player.img = loadImage("assets\\player.png");
+	Data.enemy.img = loadImage("assets\\enemy.png");
 }

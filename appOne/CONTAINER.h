@@ -1,12 +1,14 @@
 #pragma once
 #include "TITLE.h"
 #include "PLAYER.h"
+#include "ENEMIES.h"
 class CONTAINER
 {
 	// TITLE::DATAの実体を、何故「TITLE.h」とここで、2つ作っている？　というかこれはクラスではなく構造体？
 	struct DATA {
 		TITLE::DATA title;
 		PLAYER::DATA player;
+		ENEMIES::DATA enemy;
 	};
 	DATA Data;
 public:
@@ -18,4 +20,5 @@ public:
 	// ポインタか参照
 	const TITLE::DATA& title() { return Data.title; }
 	const PLAYER::DATA& player() { return Data.player; }
+	const ENEMIES::DATA& enemy() { return Data.enemy; }
 };
