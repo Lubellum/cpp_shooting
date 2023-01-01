@@ -2,7 +2,7 @@
 class GAME
 {
 
-// コンテナ
+// コンテナ //
 private:
 	// CONTAINERにポインタを付ける理由は？　GAMEクラスの外のクラスを継承(？)しようとしたから？
 	// アドレスを取得するための変数Containerの定義。(型をポインタ型にすることでポインタを扱えるようにする)
@@ -10,7 +10,7 @@ private:
 public:
 	class CONTAINER* container() { return Container; }
 
-// シーン
+// シーン //
 public:
 	enum SCENE_ID {
 		// 未定義の場合に何もしない...
@@ -29,13 +29,15 @@ private:
 public:
 	void changeScene(SCENE_ID sceneId);
 
-// キャラクタ
+// キャラクタ //
 private:
 	class PLAYER* Player;
+	class ENEMIES* Enemies;
 public:
 	// コンストラクタ？　コンストラクタなら、何故Pが小文字でも動作する？
 	// (クラスの名前と全く同じでないとコンストラクタになり得ないのでは？)
-	class PLAYER* player() { return Player; };
+	class PLAYER* player() { return Player; }
+	class ENEMIES* enemies() { return Enemies; }
 public:
 	GAME();
 	~GAME();
