@@ -15,7 +15,6 @@ GAME::GAME() {
 	Scenes[STAGE_ID]       = new STAGE(this);
 	Scenes[GAME_CLEAR_ID]  = new GAME_CLEAR(this);
 	Scenes[GAME_OVER_ID]   = new GAME_OVER(this);
-	CurSceneId = TITLE_ID;
 
 	// 変数のスコープは関数の中だけでは？
 	Player = new PLAYER(this);
@@ -39,7 +38,10 @@ void GAME::run() {
 	Container->load();
 	Scenes[TITLE_ID]->create();
 	Player->create();
+	Enemies->create();
 
+	CurSceneId = TITLE_ID;
+	Scenes[CurSceneId]->init();
 	initDeltaTime();
 	while (notQuit) {
 		setDeltaTime();
@@ -50,4 +52,5 @@ void GAME::run() {
 
 void GAME::changeScene(SCENE_ID sceneId) {
 	CurSceneId = sceneId;
+	Scenes[CurSceneId]->init();
 }

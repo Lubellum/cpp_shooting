@@ -13,6 +13,7 @@ public:
         // 「int」と「float」の違いは？　→　intが個数など数値に厳密性が求められるもの？ floatはおおよその数値を扱う？
         float majRadius;
         float minRadius;
+        // centerPos.Y と、targetPosYの違いは？　→　centerがEnemy達の中心点？targetPosは個々の位置？
         VECTOR2 centerPos;
         float fallSpeed;
         float targetPosY;

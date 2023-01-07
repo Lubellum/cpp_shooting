@@ -36,6 +36,7 @@ private:
 public:
 	// コンストラクタ？　コンストラクタなら、何故Pが小文字でも動作する？
 	// (クラスの名前と全く同じでないとコンストラクタになり得ないのでは？)
+	// ゲッターらしい。ゲッターとは？
 	class PLAYER* player() { return Player; }
 	class ENEMIES* enemies() { return Enemies; }
 public:

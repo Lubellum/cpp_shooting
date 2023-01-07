@@ -23,7 +23,9 @@ void ENEMIES::init(){
 	}
 }
 void ENEMIES::update(){
-	if(Enemy.centerPos.y < Enemy.targetPosY)
+	if (Enemy.centerPos.y < Enemy.targetPosY) {
+		Enemy.centerPos.y += Enemy.fallSpeed * delta;
+	}
 	for (int i = 0; i < Enemy.totalNum; i++) {
 		float theta = Enemy.refTheta + Enemies[i].ofsetTheta;
 		float px = Enemy.centerPos.x + cos(theta) * Enemy.majRadius;
@@ -31,7 +33,10 @@ void ENEMIES::update(){
 		Enemies[i].pos.x = px;
 		Enemies[i].pos.y = py;
 	}
+	Enemy.refTheta += Enemy.thetaSpeed * delta;
 }
 void ENEMIES::draw(){
-
+	for (int i = 0; i < Enemy.totalNum; i++) {
+		image(Enemy.img, Enemies[i].pos.x, Enemies[i].pos.y);
+	}
 }
