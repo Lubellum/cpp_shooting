@@ -22,7 +22,7 @@ GAME::GAME() {
 }
 
 GAME::~GAME() {
-	// 後にnewしてメモリを確保したものからdeleteでメモリを解放
+	// 後にnewしてメモリを確保したものから、順番にdeleteでメモリを解放
 	delete Enemies;
 	delete Player;
 	// ヒープ領域

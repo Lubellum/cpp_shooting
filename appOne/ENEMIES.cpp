@@ -17,6 +17,7 @@ void ENEMIES::create(){
 void ENEMIES::init(){
 	// ラジアンで角度を定義。
 	// 「3.1415926f * 2」が2π=360° を、Enemyの数で割っている。
+	// 向きでしかない。2πで方向だけを定義。2πrのrをlimit→0で消して疑似的に角度だけを表現
 	float divTheta = 3.1415926f * 2 / Enemy.totalNum;
 	for (int i = 0; i < Enemy.totalNum; i++) {
 		Enemies[i].ofsetTheta = divTheta * i;
@@ -25,7 +26,12 @@ void ENEMIES::init(){
 void ENEMIES::update(){
 	if (Enemy.centerPos.y < Enemy.targetPosY) {
 		Enemy.centerPos.y += Enemy.fallSpeed * delta;
+		// もしtargetPosYを超えていたら、targetPosYに位置を定義する
+		if (Enemy.centerPos.y >= Enemy.targetPosY) {
+			Enemy.centerPos.y = Enemy.targetPosY;
+		}
 	}
+	// Enemyの位置を定義
 	for (int i = 0; i < Enemy.totalNum; i++) {
 		float theta = Enemy.refTheta + Enemies[i].ofsetTheta;
 		float px = Enemy.centerPos.x + cos(theta) * Enemy.majRadius;
@@ -33,6 +39,7 @@ void ENEMIES::update(){
 		Enemies[i].pos.x = px;
 		Enemies[i].pos.y = py;
 	}
+	// Enemyを回転させる。
 	Enemy.refTheta += Enemy.thetaSpeed * delta;
 }
 void ENEMIES::draw(){

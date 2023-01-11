@@ -21,12 +21,12 @@ void CONTAINER::setData() {
 	Data.player.limitW = 100;
 
 	Data.enemy.totalNum = 8;
-	Data.enemy.majRadius = 700;
-	Data.enemy.minRadius = 100;
-	Data.enemy.centerPos = VECTOR2(960, -300);
-	Data.enemy.fallSpeed = 60;
-	Data.enemy.targetPosY = 300;
-	Data.enemy.refTheta = 0;
+	Data.enemy.majRadius = 700.0f;
+	Data.enemy.minRadius = 100.0f;
+	Data.enemy.centerPos = VECTOR2(960.f, -300.0f);
+	Data.enemy.fallSpeed = 60.0f;
+	Data.enemy.targetPosY = 300.0f;
+	Data.enemy.refTheta = 0.0f;
 	Data.enemy.thetaSpeed = 0.6f;
 }
 
