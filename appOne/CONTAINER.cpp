@@ -1,7 +1,6 @@
 #include "CONTAINER.h"
 void CONTAINER::load() {
 	setData();
-	// ロードするタイミングを分けたり…
 	loadGraphic();
 }
 
