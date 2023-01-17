@@ -58,6 +58,7 @@
     </ClCompile>
     <ClCompile Include="PLAYER.cpp" />
     <ClCompile Include="ENEMIES.cpp" />
+    <ClCompile Include="BULLETS.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GAME.h">
@@ -86,5 +87,6 @@
     </ClInclude>
     <ClInclude Include="PLAYER.h" />
     <ClInclude Include="ENEMIES.h" />
+    <ClInclude Include="BULLETS.h" />
   </ItemGroup>
 </Project>
