@@ -2,6 +2,7 @@
 #include "TITLE.h"
 #include "PLAYER.h"
 #include "ENEMIES.h"
+#include "BULLETS.h"
 class CONTAINER
 {
 	// TITLE::DATAの実体を、何故「TITLE.h」とここで、2つ作っている？　というかこれはクラスではなく構造体？
@@ -9,6 +10,7 @@ class CONTAINER
 		TITLE::DATA title;
 		PLAYER::DATA player;
 		ENEMIES::DATA enemy;
+		BULLETS::DATA playerBullet;
 	};
 	DATA Data;
 public:

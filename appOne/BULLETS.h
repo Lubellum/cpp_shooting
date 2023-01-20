@@ -25,5 +25,13 @@ private:
 		float angle;
 	};
 	BULLET* Bullets;
+protected:
+	void SetBullets(BULLETS::DATA& data);
+public:
+	BULLETS(class GAME* game);
+	~BULLETS();
+	void init();
+	void update();
+	void draw();
 };
 
