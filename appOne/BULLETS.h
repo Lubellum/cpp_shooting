@@ -31,7 +31,9 @@ public:
 	BULLETS(class GAME* game);
 	~BULLETS();
 	void init();
+	void launch(const VECTOR2& pos,const VECTOR2& vec);
 	void update();
+	void kill(int i);
 	void draw();
 };
 
